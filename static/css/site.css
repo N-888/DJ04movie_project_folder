@@ -1,0 +1,20 @@
+.hero { /* Стили верхнего блока на страницах */
+  background: linear-gradient(135deg, rgba(13,110,253,0.12), rgba(32,201,151,0.10)); /* Мягкий градиент */
+  border: 1px solid rgba(0,0,0,0.06); /* Лёгкая граница */
+} /* Закрываем hero */
+
+.hero-icon { /* Стили контейнера иконки */
+  width: 64px; /* Ширина */
+  height: 64px; /* Высота */
+  display: grid; /* Удобно центрировать */
+  place-items: center; /* Центрирование по горизонтали и вертикали */
+  border-radius: 18px; /* Скругление */
+  background: rgba(255,255,255,0.65); /* Полупрозрачный белый фон */
+  border: 1px solid rgba(0,0,0,0.06); /* Лёгкая граница */
+} /* Закрываем hero-icon */
+
+.navbar .nav-link.active { /* Подсветка активного пункта меню */
+  color: #fff !important; /* Белый цвет текста */
+  text-decoration: underline; /* Подчёркивание */
+  text-underline-offset: 6px; /* Отступ подчёркивания */
+} /* Закрываем правило */

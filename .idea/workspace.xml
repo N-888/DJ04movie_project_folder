@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fb6c0aa6-99e3-4080-8c7d-2f408483ba9f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/DJ04movie_project_folder.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/films/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/films/templates/films/film_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/films/templates/films/film_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/films/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vendor/bootstrap-icons/bootstrap-icons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vendor/bootstrap-icons/fonts/fonts/bootstrap-icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vendor/bootstrap-icons/fonts/fonts/bootstrap-icons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/urls.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="3As4azY8KYGX9ns64qohx1waffc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/User/Desktop/10 Django/DJ04movie_project_folder/static/vendor/bootstrap-icons"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\10 Django\DJ04movie_project_folder\static\vendor\bootstrap-icons" />
+      <recent name="C:\Users\User\Desktop\10 Django\DJ04movie_project_folder\static\vendor\bootstrap-icons\fonts" />
+      <recent name="C:\Users\User\Desktop\10 Django\DJ04movie_project_folder\static\vendor\bootstrap\js" />
+      <recent name="C:\Users\User\Desktop\10 Django\DJ04movie_project_folder\static\vendor\bootstrap\css" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-ce6832f46686-7b97d883f26b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.25557.178" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb6c0aa6-99e3-4080-8c7d-2f408483ba9f" name="Changes" comment="" />
+      <created>1773368011833</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773368011833</updated>
+    </task>
+    <servers />
+  </component>
+</project>

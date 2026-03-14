@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {# Наследуем общий шаблон #}
+
+{% block title %}Список фильмов{% endblock %} {# Заголовок вкладки #}
+
+{% block content %} {# Начинаем контент страницы #}
+  <div class="hero p-4 p-md-5 rounded-4 shadow-sm mb-4"> {# Верхний красивый блок #}
+    <div class="d-flex align-items-center gap-3"> {# Раскладываем элементы в строку #}
+      <div class="hero-icon"> {# Контейнер иконки #}
+        <i class="bi bi-camera-reels fs-1"></i> {# Иконка #}
+      </div> {# Закрываем контейнер #}
+      <div> {# Текстовый блок #}
+        <h1 class="h2 mb-1">Список фильмов</h1> {# Заголовок #}
+        <p class="mb-0 text-secondary">Здесь публикуются данные, которые ты сохранила в базу.</p> {# Подзаголовок #}
+      </div> {# Закрываем текстовый блок #}
+    </div> {# Закрываем d-flex #}
+  </div> {# Закрываем hero #}
+
+  {% if films %} {# Если в базе есть фильмы #}
+    <div class="row g-3"> {# Сетка карточек #}
+      {% for film in films %} {# Перебираем фильмы #}
+        <div class="col-12 col-md-6 col-lg-4"> {# Адаптивная колонка #}
+          <div class="card h-100 shadow-sm border-0 rounded-4"> {# Карточка #}
+            <div class="card-body"> {# Контент карточки #}
+              <h5 class="card-title d-flex align-items-center gap-2"> {# Заголовок карточки #}
+                <i class="bi bi-film"></i> {# Иконка #}
+                <span>{{ film.title }}</span> {# Название из базы #}
+              </h5> {# Закрываем заголовок #}
+
+              <div class="mb-2"> {# Блок описания #}
+                <div class="text-secondary small mb-1"><i class="bi bi-journal-text me-1"></i>Описание</div> {# Подпись #}
+                <div class="text-body">{{ film.description }}</div> {# Описание из базы #}
+              </div> {# Закрываем блок #}
+
+              <div> {# Блок отзыва #}
+                <div class="text-secondary small mb-1"><i class="bi bi-chat-quote me-1"></i>Отзыв</div> {# Подпись #}
+                <div class="text-body">{{ film.review }}</div> {# Отзыв из базы #}
+              </div> {# Закрываем блок #}
+            </div> {# Закрываем card-body #}
+          </div> {# Закрываем card #}
+        </div> {# Закрываем col #}
+      {% endfor %} {# Закрываем цикл #}
+    </div> {# Закрываем row #}
+  {% else %} {# Если фильмов нет #}
+    <div class="alert alert-light border rounded-4 p-4 shadow-sm"> {# Красивый блок “пусто” #}
+      <div class="d-flex align-items-center gap-3"> {# Раскладываем элементы в линию #}
+        <i class="bi bi-inbox fs-2 text-secondary"></i> {# Иконка #}
+        <div> {# Текстовый блок #}
+          <h2 class="h5 mb-1">Пока нет записей</h2> {# Заголовок #}
+          <p class="mb-2 text-secondary">Нажми “Добавить фильм”, заполни 3 поля и сохрани.</p> {# Подсказка #}
+          <a class="btn btn-primary" href="{% url 'film_create' %}"> {# Кнопка на страницу формы #}
+            <i class="bi bi-plus-circle me-1"></i> {# Иконка #}
+            Добавить первый фильм {# Текст #}
+          </a> {# Закрываем ссылку #}
+        </div> {# Закрываем блок #}
+      </div> {# Закрываем d-flex #}
+    </div> {# Закрываем alert #}
+  {% endif %} {# Закрываем if #}
+{% endblock %} {# Закрываем content #}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {# Наследуем общий шаблон #}
+
+{% block title %}Добавить фильм{% endblock %} {# Заголовок вкладки #}
+
+{% block content %} {# Начинаем контент #}
+  <div class="hero p-4 p-md-5 rounded-4 shadow-sm mb-4"> {# Верхний блок #}
+    <div class="d-flex align-items-center gap-3"> {# Элементы в линию #}
+      <div class="hero-icon"> {# Контейнер иконки #}
+        <i class="bi bi-plus-circle fs-1"></i> {# Иконка #}
+      </div> {# Закрываем блок #}
+      <div> {# Текстовый блок #}
+        <h1 class="h2 mb-1">Добавить фильм</h1> {# Заголовок #}
+        <p class="mb-0 text-secondary">Заполни 3 поля и нажми “Сохранить” — запись попадёт в базу.</p> {# Подсказка #}
+      </div> {# Закрываем блок #}
+    </div> {# Закрываем d-flex #}
+  </div> {# Закрываем hero #}
+
+  <div class="card border-0 shadow-sm rounded-4"> {# Карточка формы #}
+    <div class="card-body p-4 p-md-5"> {# Отступы #}
+
+      <form method="post" novalidate> {# Форма POST #}
+        {% csrf_token %} {# CSRF защита #}
+
+        <div class="mb-3"> {# Отступ #}
+          <label class="form-label fw-semibold">Название фильма</label> {# Подпись #}
+          {{ form.title }} {# Поле формы #}
+        </div> {# Закрываем блок #}
+
+        <div class="mb-3"> {# Отступ #}
+          <label class="form-label fw-semibold">Описание фильма</label> {# Подпись #}
+          {{ form.description }} {# Поле формы #}
+        </div> {# Закрываем блок #}
+
+        <div class="mb-4"> {# Отступ #}
+          <label class="form-label fw-semibold">Отзыв</label> {# Подпись #}
+          {{ form.review }} {# Поле формы #}
+        </div> {# Закрываем блок #}
+
+        <div class="d-flex flex-wrap gap-2"> {# Блок кнопок #}
+          <button class="btn btn-primary" type="submit"> {# Сохранить #}
+            <i class="bi bi-check2-circle me-1"></i> {# Иконка #}
+            Сохранить {# Текст #}
+          </button> {# Закрываем кнопку #}
+
+          <a class="btn btn-outline-secondary" href="{% url 'film_list' %}"> {# Назад #}
+            <i class="bi bi-arrow-left me-1"></i> {# Иконка #}
+            Назад к списку {# Текст #}
+          </a> {# Закрываем ссылку #}
+        </div> {# Закрываем блок кнопок #}
+      </form> {# Закрываем форму #}
+
+    </div> {# Закрываем card-body #}
+  </div> {# Закрываем card #}
+{% endblock %} {# Закрываем content #}

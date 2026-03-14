@@ -1,0 +1,78 @@
+{% load static %} {# Подключаем static, чтобы подключать CSS/JS из папки static #}
+<!doctype html> {# Включаем современный HTML #}
+<html lang="ru"> {# Указываем язык страницы #}
+<head> {# Начинаем head #}
+  <meta charset="utf-8"> {# Кодировка UTF-8 #}
+  <meta name="viewport" content="width=device-width, initial-scale=1"> {# Адаптивность на телефонах #}
+  <title>{% block title %}Movie Project{% endblock %}</title> {# Заголовок вкладки браузера #}
+
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"> {# Bootstrap локально (без CDN) #}
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap-icons/bootstrap-icons.min.css' %}"> {# Иконки локально (без CDN) #}
+  <link rel="stylesheet" href="{% static 'css/site.css' %}"> {# Наши дополнительные стили #}
+</head> {# Закрываем head #}
+
+<body class="bg-body-tertiary"> {# Лёгкий современный фон #}
+
+  {% with url_name=request.resolver_match.url_name %} {# Берём имя текущего маршрута для подсветки активного пункта меню #}
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm"> {# Верхнее меню #}
+    <div class="container"> {# Контейнер по центру #}
+
+      <a class="navbar-brand d-flex align-items-center gap-2" href="{% url 'film_list' %}"> {# Логотип-ссылка на главную #}
+        <i class="bi bi-film fs-4"></i> {# Иконка #}
+        <span class="fw-semibold">Movie Project</span> {# Текст логотипа #}
+      </a> {# Закрываем логотип #}
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"> {# Кнопка бургера для телефона #}
+        <span class="navbar-toggler-icon"></span> {# Иконка бургера #}
+      </button> {# Закрываем кнопку #}
+
+      <div class="collapse navbar-collapse" id="navMenu"> {# Сворачиваемое меню #}
+        <ul class="navbar-nav ms-auto gap-lg-2"> {# Меню справа #}
+
+          <li class="nav-item"> {# Пункт меню #}
+            <a class="nav-link {% if url_name == 'film_list' %}active fw-semibold{% endif %}" href="{% url 'film_list' %}"> {# Подсвечиваем активный пункт #}
+              <i class="bi bi-card-list me-1"></i> {# Иконка #}
+              Список фильмов {# Текст #}
+            </a> {# Закрываем ссылку #}
+          </li> {# Закрываем пункт #}
+
+          <li class="nav-item"> {# Пункт меню #}
+            <a class="nav-link {% if url_name == 'film_create' %}active fw-semibold{% endif %}" href="{% url 'film_create' %}"> {# Подсвечиваем активный пункт #}
+              <i class="bi bi-plus-circle me-1"></i> {# Иконка #}
+              Добавить фильм {# Текст #}
+            </a> {# Закрываем ссылку #}
+          </li> {# Закрываем пункт #}
+
+        </ul> {# Закрываем список #}
+      </div> {# Закрываем collapse #}
+
+    </div> {# Закрываем container #}
+  </nav> {# Закрываем nav #}
+  {% endwith %} {# Закрываем with #}
+
+  <main class="container py-4"> {# Основной контейнер страницы #}
+
+    {% if messages %} {# Проверяем, есть ли сообщения #}
+      <div class="mb-3"> {# Отступ снизу #}
+        {% for message in messages %} {# Перебираем сообщения #}
+          <div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %} alert-dismissible fade show" role="alert"> {# Красивый alert #}
+            <i class="bi bi-info-circle me-1"></i> {# Иконка #}
+            {{ message }} {# Текст сообщения #}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> {# Кнопка закрыть #}
+          </div> {# Закрываем alert #}
+        {% endfor %} {# Закрываем цикл #}
+      </div> {# Закрываем блок #}
+    {% endif %} {# Закрываем if #}
+
+    {% block content %}{% endblock %} {# Сюда подставляется содержимое страниц #}
+  </main> {# Закрываем main #}
+
+  <footer class="py-4"> {# Подвал #}
+    <div class="container text-center text-secondary"> {# Центрируем текст #}
+      <small>© {% now "Y" %} Movie Project • Django + Bootstrap</small> {# Год автоматически #}
+    </div> {# Закрываем container #}
+  </footer> {# Закрываем footer #}
+
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script> {# Bootstrap JS локально #}
+</body> {# Закрываем body #}
+</html> {# Закрываем html #}
